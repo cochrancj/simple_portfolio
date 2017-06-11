@@ -1,0 +1,846 @@
+* {
+	box-sizing: border-box;
+	background-color: gainsboro;
+/*	font-size: calc(14px + (16 - 14) * ((100vw - 300px)/ (1400 - 300)));
+	max-width: 40em;
+	margin: calc(1em + 5vh) calc(.5em + 5vw);
+	padding: calc(.5rem + 1vh) calc(.5rem + 2vw);*/
+}
+
+/*
+body {
+  // font grows 1px for every 100px of viewport width
+  font-size: calc(16px + 1vw);
+  // leading grows along with font,
+  // with an additional 0.1em + 0.5px per 100px of the viewport
+  line-height: calc(1.1em + 0.5vw);
+}*/
+
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	background: #ff00cc; 
+	background: -webkit-linear-gradient(to right, #333399, #ff00cc); 
+	background: linear-gradient(to right, #333399, #ff00cc); 
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+ul {
+	list-style-type: none;
+}
+
+/* ======================================= */
+/* HOME PAGE */
+/* ======================================= */
+
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+}
+
+/* CC LOGO */
+
+.logo {
+	margin: 5% auto;
+	width: 30%;
+	padding: 2% 5%;
+	border: 2px solid black;
+}
+
+.wrapper h1, li	{
+	text-align: center;
+	font-family: 'Carrois Gothic SC', sans-serif;
+}
+
+.logo h1 {
+	font-size: 5em;
+}
+
+/* NAME */
+
+header h1 {
+	font-size: 6em;
+}
+
+/* TEXT CAROUSEL - I AM */
+
+span {
+	background: #ff00cc; 
+	background: -webkit-linear-gradient(to right, #333399, #ff00cc); 
+	background: linear-gradient(to right, #333399, #ff00cc); 
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content-carousel {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel {
+  height: 3.5em;
+  overflow: visible;
+  position: relative;
+}
+
+.mask {
+  overflow: hidden;
+  height: 3.5em;
+}
+
+.carousel ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.carousel li {
+  height: 3.5em;
+  position: absolute;
+  top: -325px;
+  list-style: none;
+  left: 40%;
+}
+
+.carousel .i-am {
+  font-size: 2em;
+  font-family: 'Cardo', serif;
+}
+
+
+
+/* CAROUSEL ANIMATIONS */
+
+.carousel li.anim1 {
+  -moz-animation: cycle 15s linear infinite;
+  -webkit-animation: cycle 15s linear infinite;
+  animation: cycle 15s linear infinite;
+}
+
+.carousel li.anim2 {
+  -moz-animation: cycle2 15s linear infinite;
+  -webkit-animation: cycle2 15s linear infinite;
+  animation: cycle2 15s linear infinite;
+}
+
+.carousel li.anim3 {
+  -moz-animation: cycle3 15s linear infinite;
+  -webkit-animation: cycle3 15s linear infinite;
+  animation: cycle3 15s linear infinite;
+}
+
+.carousel li.anim4 {
+  -moz-animation: cycle4 15s linear infinite;
+  -webkit-animation: cycle4 15s linear infinite;
+  animation: cycle4 15s linear infinite;
+}
+
+.carousel li.anim5 {
+  -moz-animation: cycle5 15s linear infinite;
+  -webkit-animation: cycle5 15s linear infinite;
+  animation: cycle5 15s linear infinite;
+}
+
+.carousel li.anim6 {
+  -moz-animation: cycle6 15s linear infinite;
+  -webkit-animation: cycle6 15s linear infinite;
+  animation: cycle6 15s linear infinite;
+}
+
+.carousel li.anim7 {
+  -moz-animation: cycle7 15s linear infinite;
+  -webkit-animation: cycle7 15s linear infinite;
+  animation: cycle7 15s linear infinite;
+}
+
+.carousel:hover li {
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+
+@-webkit-keyframes cycle {
+  0% {
+    top: 0px;
+  }
+  4% {
+    top: 0px;
+    opacity: 1;
+  }
+  8% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  20% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  21% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  50% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  92% {
+    top: -325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  96% {
+    top: -325px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes cycle2 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  8% {
+    top: -325px;
+    opacity: 0;
+  }
+  12% {
+    top: 0px;
+    opacity: 1;
+  }
+  16% {
+    top: 0px;
+    opacity: 1;
+  }
+  20% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  40% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  41% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes cycle3 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  20% {
+    top: -325px;
+    opacity: 0;
+  }
+  24% {
+    top: 0px;
+    opacity: 1;
+  }
+  28% {
+    top: 0px;
+    opacity: 1;
+  }
+  32% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  60% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  61% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes cycle4 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  32% {
+    top: -325px;
+    opacity: 0;
+  }
+  36% {
+    top: 0px;
+    opacity: 1;
+  }
+  40% {
+    top: 0px;
+    opacity: 1;
+  }
+  44% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  80% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  81% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes cycle5 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  44% {
+    top: -325px;
+    opacity: 0;
+  }
+  48% {
+    top: 0px;
+    opacity: 1;
+  }
+  52% {
+    top: 0px;
+    opacity: 1;
+  }
+  56% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  80% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  81% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes cycle6 {
+  0% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  56% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  60% {
+    top: 0px;
+    opacity: 1;
+  }
+  64% {
+    top: 0px;
+    opacity: 1;
+  }
+  68% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+
+  80% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  81% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes cycle7 {
+  0% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  70% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  74% {
+    top: 0px;
+    opacity: 1;
+  }
+  78% {
+    top: 0px;
+    opacity: 1;
+  }
+  80% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  100% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@-moz-keyframes cycle {
+  0% {
+    top: 0px;
+  }
+  4% {
+    top: 0px;
+    opacity: 1;
+  }
+  8% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  20% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  21% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  50% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  92% {
+    top: -325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  96% {
+    top: -325px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes cycle2 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  8% {
+    top: -325px;
+    opacity: 0;
+  }
+  12% {
+    top: 0px;
+    opacity: 1;
+  }
+  16% {
+    top: 0px;
+    opacity: 1;
+  }
+  20% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  40% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  41% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-moz-keyframes cycle3 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  20% {
+    top: -325px;
+    opacity: 0;
+  }
+  24% {
+    top: 0px;
+    opacity: 1;
+  }
+  28% {
+    top: 0px;
+    opacity: 1;
+  }
+  32% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  60% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  61% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-moz-keyframes cycle4 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  32% {
+    top: -325px;
+    opacity: 0;
+  }
+  36% {
+    top: 0px;
+    opacity: 1;
+  }
+  40% {
+    top: 0px;
+    opacity: 1;
+  }
+  44% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  80% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  81% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-moz-keyframes cycle5 {
+  0% {
+    top: -325px;
+    opacity: 0;
+  }
+  44% {
+    top: -325px;
+    opacity: 0;
+  }
+  48% {
+    top: 0px;
+    opacity: 1;
+  }
+  52% {
+    top: 0px;
+    opacity: 1;
+  }
+  56% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  80% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  81% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-moz-keyframes cycle6 {
+  0% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  56% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  60% {
+    top: 0px;
+    opacity: 1;
+  }
+  64% {
+    top: 0px;
+    opacity: 1;
+  }
+  68% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+
+  80% {
+    top: moz
+    opacity: 0;
+    z-index: 0;
+  }
+  81% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-moz-keyframes cycle7 {
+  0% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  70% {
+    top: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  74% {
+    top: 0px;
+    opacity: 1;
+  }
+  78% {
+    top: 0px;
+    opacity: 1;
+  }
+  80% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  100% {
+    top: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+/* BOTTOM SOCIAL NAVIGATION LINKS */
+
+.bottom-social-nav ul {
+	margin: 5% 23%;
+	width: 100%;
+
+}
+.bottom-social-nav li {
+	padding: 2% 5%;
+	display: inline;
+}
+
+.bottom-social-nav img {
+	width: 2%;
+	height: 2%;
+}
+
+/* ============================================ */
+/* PROJECTS PAGE */
+/* ============================================ */
+
+
+/* SCROLL TO THE TOP */
+
+#toTop {
+    padding: 1% 2%;
+    background: #000;
+    opacity: 0.75;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    right: 1%;
+    display: none;
+    font-family: 'Carrois Gothic SC', sans-serif;
+}
+
+
+/* EVERYTHING GETS WRAPPED IN A FEATURE QUERY SINCE I WANT TO USE GRID ON THIS PAGE */
+
+@supports (display: grid) {
+	/* RULES FOR GRID-SUPPORTING BROWSERS. ADD A FLOATS FALLBACK */
+
+    /* PAGE SETUP */
+
+	.project-wrapper {
+	  width: 90vw;
+	  margin-left: 2%;
+	  display: grid;
+	  /*grid-template-columns: 150px 1fr 2fr;*/
+	  grid-template-columns: minmax(min-content, min-content) 1fr 3fr;
+	  grid-gap: 2%;
+	}
+
+	.project-wrapper ul {
+		padding-left: 0;
+	}
+
+	/* SIDEBAR SOCIAL NAVIGATION */
+	.side-social-nav li {
+		padding: 0 5%;
+	}
+
+	.side-social-nav img {
+		width: 25px;
+		height: 25px;
+	}
+
+	/* LIST OF PROJECTS */
+
+	.projects-list h1 {
+		font-family: 'Carrois Gothic SC', sans-serif;
+	}
+
+	.projects-list li {
+		padding-top: 2%;
+		padding-bottom: 5%;
+		border-bottom: 1px solid #ccc;
+		text-align: left;
+	}
+
+	/* EXPANDED PROJECTS */
+
+	.project-title h1, h2 {
+		font-family: 'Cardo', serif;
+		/*font-family: 'Carrois Gothic SC', sans-serif;*/
+	}
+
+
+	.detail {
+		display: flex;
+		/*justify-content: flex-start;*/
+		/*flex-wrap: nowrap;*/
+		border-bottom: 1px solid #ccc;
+		justify-content: space-between;
+	}
+
+	.technologies {
+		/*align-self: flex-start;*/
+		margin-right: 10%;
+	}
+
+	.technologies li {
+		text-align: left;
+		font-family: 'Carrois Gothic SC', sans-serif;
+		/*font-family: 'Cardo', serif;*/
+	}
+
+	.expanded-info {
+		align-self: center;
+		/*font-family: 'Carrois Gothic SC', sans-serif;*/
+		font-family: 'Carrois Gothic', sans-serif;
+		/*font-family: 'Cardo', serif;*/
+	}
+
+	.view-site {
+		font-family: 'Cardo', serif;
+		/*font-family: 'Carrois Gothic SC', sans-serif;*/
+		text-align: right;
+		margin-right: 8%;
+
+	}
+
+	.view-site a {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+
+}
+
+
+
+
+
+
+
