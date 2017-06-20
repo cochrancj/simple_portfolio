@@ -784,16 +784,46 @@ span {
     font-family: 'Carrois Gothic SC', sans-serif;
 }
 
+/* FALLBACKS FOR NON-GRID BROWSERS */
+
+.project-wrapper > div {
+  display: inline-block;
+}
+
+.side-social-nav ul {
+  display: inline;
+  margin: 2% auto;
+}
+
+.projects-list ul {
+  display: inline;
+}
+
+/* CLEARFIX */
+.view-site:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.code {
+  float: left;
+}
+
+.live {
+  float: right;
+}
+
 
 /* EVERYTHING GETS WRAPPED IN A FEATURE QUERY SINCE I WANT TO USE GRID ON THIS PAGE */
 
 @supports (display: grid) {
-  /* RULES FOR GRID-SUPPORTING BROWSERS. ADD A FLOATS FALLBACK */
+  /* RULES FOR GRID-SUPPORTING BROWSERS */
 
-    /* PAGE SETUP */
+  /* PAGE SETUP */
 
   .project-wrapper {
-/*    width: 90vw;*/
+    margin-top: 2%;
     margin-left: 2%;
     margin-right: 5%;
     display: grid;
@@ -806,6 +836,7 @@ span {
   }
 
   /* SIDEBAR SOCIAL NAVIGATION */
+
   .side-social-nav li {
     padding: 0 5%;
   }
@@ -823,7 +854,7 @@ span {
 
   .projects-list li {
     padding-top: 2%;
-    padding-bottom: 5%;
+    padding-bottom: 2%;
     border-bottom: 1px solid #ccc;
     text-align: left;
   }
@@ -832,7 +863,6 @@ span {
 
   .project-title h1, h2 {
     font-family: 'Cardo', serif;
-    /*font-family: 'Carrois Gothic SC', sans-serif;*/
   }
 
   .project-image img {
@@ -842,36 +872,30 @@ span {
 
   .detail {
     display: flex;
-    /*justify-content: flex-start;*/
-    /*flex-wrap: nowrap;*/
     border-bottom: 1px solid #ccc;
     justify-content: space-between;
   }
 
   .technologies {
-    /*align-self: flex-start;*/
     margin-right: 10%;
   }
 
   .technologies li {
     text-align: left;
     font-family: 'Carrois Gothic SC', sans-serif;
-    /*font-family: 'Cardo', serif;*/
   }
 
   .expanded-info {
     align-self: center;
-    /*font-family: 'Carrois Gothic SC', sans-serif;*/
     font-family: 'Carrois Gothic', sans-serif;
-    /*font-family: 'Cardo', serif;*/
   }
 
   .view-site {
     font-family: 'Cardo', serif;
-    /*font-family: 'Carrois Gothic SC', sans-serif;*/
     text-align: right;
     margin-right: 8%;
-
+    margin-bottom: 5%;
+    margin-top: 5%;
   }
 
   .view-site a {
@@ -889,15 +913,15 @@ span {
 
 @media (max-width: 600px) {
 
-/* Attempt to move the side nav to the bottom 2
-*/
   html {
     position: relative;
     min-height: 100%;
   }
+
   body {
       margin: 0 0 100px; 
   }
+
   footer {
       position: absolute;
       left: 0;
@@ -929,13 +953,6 @@ span {
 
   .side-social-nav {
     display: none;
-  }
-
-  /* CLEARFIX */
-  .expanded-project:after {
-    content: "";
-    display: block;
-    clear: both;
   }
 
   .project-title {
